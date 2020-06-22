@@ -45,7 +45,32 @@ It is a database model of a Milk Company that we could use to test and evaluate 
 
 ## Considerations
 
+* It works with MySQL 8.0 or higher**.   It could work with an older version of MySQL but you must replace the encoding:
+
+```sql
+-- mysql 8.0
+DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+-- mysql <=5.7
+DEFAULT CHARSET=utf8 
+```
+
 * It misses some features. For example, a table of purchases, the salaries and the costs of each branches are fixed
 * Values are not inflationary. 
 * It lacks shipping
 * It does not consider taxes. If the taxes are flat, then it is not a problem.
+
+## How to install it?
+
+1. Create a new schema or use one.
+
+```
+CREATE SCHEMA `milkco2` ;
+```
+
+2. Run the [ddl.sql](ddql.sql)  script
+   1. It includes the structure of the database and the foreign key.s
+3. Run the [dml.sql](dml.sql) script.
+   1. It includes the data of the database.
+
+
+
