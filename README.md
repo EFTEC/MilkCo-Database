@@ -81,8 +81,8 @@ Did you see the trend?
 
 1. Create a new schema or use one.
 
-```
-CREATE SCHEMA `milkco2` ;
+```sql
+CREATE SCHEMA `milkco` ; -- or you can use any name.
 ```
 
 2. Run the [ddl.sql](ddql.sql)  script
