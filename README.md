@@ -48,7 +48,7 @@ It is a database model of a Milk Company that we could use to test and evaluate 
 * It works with MySQL 8.0 or higher**.   It could work with an older version of MySQL but you must replace the encoding:
 
 ```sql
--- mysql 8.0
+![invoices_per_day](D:\dropbox\Projects\MilkCo-Database\invoices_per_day.jpg)-- mysql 8.0
 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
 -- mysql <=5.7
 DEFAULT CHARSET=utf8 
@@ -58,6 +58,24 @@ DEFAULT CHARSET=utf8
 * Values are not inflationary. 
 * It lacks shipping
 * It does not consider taxes. If the taxes are flat, then it is not a problem.
+
+## Trends
+
+This database was created with random values. However, it has some trends (that I don't want to spoil much the results 😀)
+
+### For example, the invoices per day (January 2020)
+
+![](D:\dropbox\Projects\MilkCo-Database\invoices_per_day.jpg)
+
+So, apparently, there is not a trend.
+
+### And Invoices per day week (January 2020)
+
+![](D:\dropbox\Projects\MilkCo-Database\invoices-per-day-week.jpg)
+
+Did you see the trend?
+
+
 
 ## How to install it?
 
