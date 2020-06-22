@@ -92,5 +92,9 @@ CREATE SCHEMA `milkco` ; -- or you can use any name.
 3. Run the [dml.sql](dml.sql) script.
    1. It includes the data of the database.
 
+## Related link
+
+https://www.southprojects.com/architecture/milko-fake-database-example
+
 
 
