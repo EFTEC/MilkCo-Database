@@ -61,17 +61,19 @@ DEFAULT CHARSET=utf8
 
 ## Trends
 
-This database was created with random values. However, it has some trends (that I don't want to spoil much the results 😀)
+This database was created with random values. However, it has some trends 
+
+>   (I don't want to spoil much the results 😀)
 
 ### For example, the invoices per day (January 2020)
 
-![](D:\dropbox\Projects\MilkCo-Database\invoices_per_day.jpg)
+![](invoices_per_day.jpg)
 
 So, apparently, there is not a trend.
 
 ### And Invoices per day week (January 2020)
 
-![](D:\dropbox\Projects\MilkCo-Database\invoices-per-day-week.jpg)
+![](invoices-per-day-week.jpg)
 
 Did you see the trend?
 
