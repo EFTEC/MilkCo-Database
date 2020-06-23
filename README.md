@@ -64,7 +64,7 @@ It is a database model of a Milk Company that we could use to test and evaluate 
 * It works with MySQL 8.0 or higher**.   It could work with an older version of MySQL but you must replace the encoding:
 
 ```sql
-![invoices_per_day](D:\dropbox\Projects\MilkCo-Database\invoices_per_day.jpg)-- mysql 8.0
+-- mysql 8.0
 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
 -- mysql <=5.7
 DEFAULT CHARSET=utf8 
