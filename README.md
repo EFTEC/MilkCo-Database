@@ -7,9 +7,25 @@ It is an example database for MYSQL, similar to Sakila
 
 It is a database model of a Milk Company that we could use to test and evaluate Business Intelligence and Data Science.
 
+## Visual Example using Microsoft Power BI
+
+![Database example for power bi](powerbi2.jpg)
+
+[powerbi/milkco_example_v2.pbix](powerbi/milkco_example_v2.pbix)
 
 
-![](milkco.jpg)
+
+> Note: It points to my database so you will want to change the datasource.    
+> Note: Shocking but it worked OOBE Out Of Box Experience 📦 It is thanks to PowerBI understands foreign keys.   
+
+### Requirements
+
+* Microsoft PowerBI (desktop is for free https://powerbi.microsoft.com/en-us/downloads/ )   
+* MySql Connector Net ( https://dev.mysql.com/downloads/connector/net/ )
+
+## ER Diagram
+
+![](v2/milkco2.jpg)
 
 ## Features
 
@@ -87,12 +103,14 @@ Did you see the trend?
 CREATE SCHEMA `milkco` ; -- or you can use any name.
 ```
 
-2. Run the [ddl.sql](ddql.sql)  script
+2. Run the [v2/ddl.sql](v2/ddql.sql)  script
+   
    1. It includes the structure of the database and the foreign key.s
-3. Run the [dml.sql](dml.sql) script.
+3. Run the [v2/dml.sql](v2/dml.sql) script.
+   
    1. It includes the data of the database.
-4. (optional) You can delete all data executing the next script [truncate_all.sql](truncate_all.sql)   
-5. (optional) You can delete most data (data that usually changes) by executing the next script [truncate_nofixed.sql](truncate_nofixed.sql)
+4. (optional) You can delete all data executing the next script [v2/truncate_all.sql](v2/truncate_all.sql)   
+5. (optional) You can delete most data (data that usually changes) by executing the next script [v2/truncate_nofixed.sql](v2/truncate_nofixed.sql)
 
    
    
@@ -103,12 +121,21 @@ https://www.southprojects.com/architecture/milko-fake-database-example
 
 ## Versions
 
-* 1.0 
-   *   First version    
+* 2.0
+    * Rebuild the information. Now it has more records but it is only for (more or less) 15 years.
+    * Tables related with **cities** are not related with **countries** anymore (it was redundant)
+    * **Customers** buy from **branches** (offices) in the same **country**.
+    * **Employees** works in the same city than **branches**.
+    * **Customers** generate at least 1 invoice.
+    * **Branches** trend to reside in populous cities. Usually, dairy companies reside in rural towns but they sold it in big cities.
+    * **Customers** could generate 1 **invoice** per day or longer.
 * 1.1 
    * Table **Country** renamed as **Countries**.
    * New script truncate_all.sql   
-   * New script truncate_nofixed.sql        
+   * New script truncate_nofixed.sql     
+* 1.0 
+   *   First version    
+   
 
 
 

@@ -1,0 +1,16 @@
+SET FOREIGN_KEY_CHECKS=0;
+-- truncate table `Countries`;
+-- truncate table `Cities`;
+-- truncate table `Roles`;
+-- truncate table `ProductTypes`;
+truncate table `Branches`;
+truncate table `Employees`;
+-- truncate table `Brands`;
+-- truncate table `Containers`;
+truncate table `Customers`;
+truncate table `Invoices`;
+truncate table `InvoiceDetails`;
+-- truncate table `ProductSubTypes`;
+-- truncate table `Services`;
+truncate table `Skus`;
+SET FOREIGN_KEY_CHECKS=1;
