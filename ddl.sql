@@ -29,7 +29,7 @@ CREATE TABLE `Branches` (
   KEY `Branches_fk2_idx` (`idCountry`),
   KEY `Branches_fk3_idx` (`idManager`),
   CONSTRAINT `Branches_fk1` FOREIGN KEY (`idCity`) REFERENCES `Cities` (`idCity`),
-  CONSTRAINT `Branches_fk2` FOREIGN KEY (`idCountry`) REFERENCES `Country` (`idCountry`),
+  CONSTRAINT `Branches_fk2` FOREIGN KEY (`idCountry`) REFERENCES `Countries` (`idCountry`),
   CONSTRAINT `Branches_fk3` FOREIGN KEY (`idManager`) REFERENCES `Employees` (`idEmployee`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1159 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='MIT License https://github.com/EFTEC/MilkCo-Database';
 
@@ -56,7 +56,7 @@ CREATE TABLE `Cities` (
   `lastUpdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`idCity`),
   KEY `idx_fk_idCountry` (`idCountry`),
-  CONSTRAINT `Cities_fk1` FOREIGN KEY (`idCountry`) REFERENCES `Country` (`idCountry`)
+  CONSTRAINT `Cities_fk1` FOREIGN KEY (`idCountry`) REFERENCES `Countries` (`idCountry`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='MIT License https://github.com/EFTEC/MilkCo-Database';
 
 /*Table structure for table `Containers` */
@@ -71,11 +71,11 @@ CREATE TABLE `Containers` (
   PRIMARY KEY (`idContainer`)
 ) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='MIT License https://github.com/EFTEC/MilkCo-Database';
 
-/*Table structure for table `Country` */
+/*Table structure for table `Countries` */
 
-DROP TABLE IF EXISTS `Country`;
+DROP TABLE IF EXISTS `Countries`;
 
-CREATE TABLE `Country` (
+CREATE TABLE `Countries` (
   `idCountry` int NOT NULL,
   `name` varchar(50) NOT NULL,
   `lastUpdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -100,7 +100,7 @@ CREATE TABLE `Customers` (
   KEY `Customers_fk1_idx` (`idCity`),
   KEY `Customers_fk2_idx` (`idCountry`),
   CONSTRAINT `Customers_fk1` FOREIGN KEY (`idCity`) REFERENCES `Cities` (`idCity`),
-  CONSTRAINT `Customers_fk2` FOREIGN KEY (`idCountry`) REFERENCES `Country` (`idCountry`)
+  CONSTRAINT `Customers_fk2` FOREIGN KEY (`idCountry`) REFERENCES `Countries` (`idCountry`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3564 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='MIT License https://github.com/EFTEC/MilkCo-Database';
 
 /*Table structure for table `Employees` */
@@ -127,7 +127,7 @@ CREATE TABLE `Employees` (
   CONSTRAINT `Employees_fk1` FOREIGN KEY (`idBranch`) REFERENCES `Branches` (`idBranch`),
   CONSTRAINT `Employees_fk2` FOREIGN KEY (`idRole`) REFERENCES `Roles` (`idRole`),
   CONSTRAINT `Employees_fk3` FOREIGN KEY (`idCity`) REFERENCES `Cities` (`idCity`),
-  CONSTRAINT `Employees_fk4` FOREIGN KEY (`idCountry`) REFERENCES `Country` (`idCountry`)
+  CONSTRAINT `Employees_fk4` FOREIGN KEY (`idCountry`) REFERENCES `Countries` (`idCountry`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1001 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='MIT License https://github.com/EFTEC/MilkCo-Database';
 
 /*Table structure for table `InvoiceDetails` */

@@ -91,10 +91,24 @@ CREATE SCHEMA `milkco` ; -- or you can use any name.
    1. It includes the structure of the database and the foreign key.s
 3. Run the [dml.sql](dml.sql) script.
    1. It includes the data of the database.
+4. (optional) You can delete all data executing the next script [truncate_all.sql](truncate_all.sql)   
+5. (optional) You can delete most data (data that usually changes) by executing the next script [truncate_nofixed.sql](truncate_nofixed.sql)
+
+   
+   
 
 ## Related link
 
 https://www.southprojects.com/architecture/milko-fake-database-example
+
+## Versions
+
+* 1.0 
+   *   First version    
+* 1.1 
+   * Table **Country** renamed as **Countries**.
+   * New script truncate_all.sql   
+   * New script truncate_nofixed.sql        
 
 
 
