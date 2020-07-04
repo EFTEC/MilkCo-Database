@@ -139,6 +139,8 @@ https://www.southprojects.com/architecture/milko-fake-database-example
 
 ## Versions
 
+* 2.2.1
+    * Fixed sql server 2012 (.bak) because it misses some foreign keys.  
 * 2.2 
     * Added sql server 2012 and 2019.
 * 2.1
